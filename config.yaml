@@ -14,9 +14,9 @@ texts_dir: texts            # .txt files to write, one document per file
 out_dir: out
 
 # ---------------- Generation
-variants: 3                 # images per (text file, style) pair, each with new random variation
+variants: 1                 # images per (text file, style) pair, each with new random variation
 seed: 1
-variation: 1.0              # scales every measured spread (0 = copy each scan's averages exactly)
+variation: 0              # scales every measured spread (0 = copy each scan's averages exactly)
 max_pages: 10               # long texts continue onto extra pages, up to this many
 
 # ---------------- How .txt files are read
