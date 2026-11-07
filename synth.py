@@ -571,7 +571,7 @@ def cmd_generate(a):
             cname = cf.name[:-len(".structure.yaml")]
             tag = sname if cname == sname else f"{sname}+{cname}"
             for k in range(variants):
-                tasks.append((f"{t.stem}__{tag}__v{k + 1}", str(t), str(sf), str(cf), seed * 1_000_003 + len(tasks)))
+                tasks.append((f"{t.stem}", str(t), str(sf), str(cf), seed * 1_000_003 + len(tasks)))
 
     out = (root / (a.out or cfg.get("out_dir", "out"))).resolve()
     for d in ("images", "labels") + (("rec",) if a.rec_crops else ()):
